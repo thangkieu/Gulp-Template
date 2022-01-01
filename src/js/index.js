@@ -1,5 +1,3 @@
-function hello() {
-  console.log('hello world 2 3 444');
-}
+function onLoaded() {}
 
-hello();
+document.addEventListener("DOMContentLoaded", onLoaded);

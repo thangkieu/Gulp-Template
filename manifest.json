@@ -1,0 +1,11 @@
+{
+  "manifest_version": 2,
+  "description": "Gulp Template",
+  "name": "Gulp Template",
+  "version": "1.0.7",
+  "background_color": "#001717",
+  "browser_action": {
+    "default_title": "Gulp Template",
+    "default_icon": "/favicon.ico"
+  }
+}
