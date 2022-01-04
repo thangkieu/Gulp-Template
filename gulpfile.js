@@ -92,6 +92,8 @@ function js() {
 }
 
 function templates() {
+  const data = require("./src/data/data.json");
+
   const options = {
     ignorePartials: true,
     batch: ["src/partials"],
@@ -101,7 +103,7 @@ function templates() {
 
   return gulp
     .src("src/templates/**/*.hbs")
-    .pipe(handlebars({}, options))
+    .pipe(handlebars(data, options))
     .pipe(rename({ extname: ".html" }))
     .pipe(gulp.dest("build"));
 }
@@ -122,7 +124,6 @@ function watch() {
   gulp.watch("src/js/**/*.js", js);
   gulp.watch("src/assets/**/*.*", assets);
 
-  console.log("watching hbs");
   gulp
     .watch(
       ["src/templates/**/*.hbs", "src/partials/**/*.hbs"],

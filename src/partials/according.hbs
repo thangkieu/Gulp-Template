@@ -1,0 +1,26 @@
+<nav class="pane panel-parameters js-panel-{{name}}-container" data-toggle="panel-parameters">
+  <div class="panel-heading">
+    <span class="fa fa-chevron-down js-toggle-btn"></span>
+    <span class="panel-heading-text js-toggle-btn">{{heading}}</span>
+    <div class="panel-actions">
+      <button class="button is-info btn-action js-btn-{{name}}-update">Update</button>
+      {{#if extraAction}}
+        <button class="button is-success btn-action js-btn-{{name}}-{{extraAction}}">{{extraAction}}</button>
+      {{/if}}
+    </div>
+  </div>
+  <div class="panel-block js-item-list">
+    {{#each items}}
+      {{#if ../extraAction}}
+        <label class="host-item js-item-select" data-name="REPORT 1" data-id="12345" data-ceids="STARTED" data-vids="WaterCount,EventsEnabled">
+          {{this}}
+        </label>
+      {{else}}
+        <label class="checkbox">
+          <input type="checkbox" name="{{../name}}" value="{{this}}"/>
+          {{this}}
+        </label>
+      {{/if}}
+    {{/each}}
+  </div>
+</nav>

@@ -1,0 +1,32 @@
+{
+  "gemhost": [
+    {
+      "heading": "CEIDs",
+      "name": "ceids",
+      "items": ["STARTED", "COMPLETED"]
+    },
+    {
+      "heading": "VIDS",
+      "name": "vids",
+      "items": [
+        "ControlState",
+        "CommsState",
+        "RecipeSelected",
+        "EventsEnabled",
+        "EventsDisabled"
+      ]
+    },
+    {
+      "heading": "RPIDS",
+      "name": "report",
+      "items": ["Report 1", "Report 2"],
+      "extraAction": "New"
+    },
+    {
+      "heading": "HostCommandStop",
+      "name": "hostcommmandstop",
+      "items": ["Item 1", "Item 2"],
+      "extraAction": "Send"
+    }
+  ]
+}
