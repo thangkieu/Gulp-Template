@@ -16,7 +16,11 @@ function onLoaded() {
 
   $(document)
     .on("click", ".js-toggle-btn", function () {
-      $(this).closest("[data-toggle]").find(".panel-block").toggle({
+      const $toggle = $(this).closest("[data-toggle]");
+      const status = $toggle.attr("aria-expanded") === "true";
+      $toggle.attr("aria-expanded", status ? "false" : "true");
+
+      $toggle.find(".panel-block").toggle({
         duration: 200,
       });
     })

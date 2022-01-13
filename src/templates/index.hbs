@@ -1023,14 +1023,28 @@
                       </div>
                       </form>
                       <div class="is-flex gap-md report-details-table">
-                        <div class="is-half report-details-item">
-                          <h4 class="title is-6 parameters-title">REPORTColumn1 </h4>
-                          <ul class="normal-list js-report-ceids-list">
-                           
-                          </ul>
+                        <div class="is-half">
+                          <div class="report-details-item">
+                            <label class="title parameters-title m-0 is-flex gap-md">
+                              <input type="radio" name="reportType">
+                              Use Interval
+                            </label>
+                            <div class="p-2">
+                              <label for="">Interval time</label>
+                              <input name="intervalTime" type="text" class="form-control arc-input" placeholder="hh:mm:ss">
+                            </div>
+                          </div>
+                          <div class="report-details-item mt-2">
+                            <label class="title parameters-title m-0 is-flex gap-md">
+                              <input type="radio" name="reportType">
+                              Use CEIDs (Events)
+                            </label>
+                            <ul class="normal-list js-report-ceids-list">
+                            </ul>
+                          </div>
                         </div>
                         <div class="is-half report-details-item">
-                          <h4 class="title is-6 parameters-title">REPORTColumn1 </h4>
+                          <h4 class="title is-6 parameters-title">Selected VIDS () </h4>
                            <ul class="normal-list js-report-vids-list">
                            
                           </ul>
