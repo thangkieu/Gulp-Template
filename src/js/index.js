@@ -37,13 +37,13 @@ function onLoaded() {
       $ceidsCheckboxes.prop("checked", false);
       $vidsCheckboxes.prop("checked", false);
 
-      (data.ceids || "").split(",").forEach((item) => {
+      (data.ceids || "").split(",").forEach(function (item) {
         $ceidsList.append(`<li>${item}</li>`);
         $(`${ceidsCheckboxesUrl}[value=${item}]`).prop("checked", true);
       });
 
       $vidsList.empty();
-      (data.vids || "").split(",").forEach((item) => {
+      (data.vids || "").split(",").forEach(function (item) {
         $vidsList.append(`<li>${item}</li>`);
         $(`${vidsCheckboxes}[value=${item}]`).prop("checked", true);
       });
