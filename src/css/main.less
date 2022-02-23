@@ -7,6 +7,37 @@ html {
   height: 100%;
 }
 
+.btn-circle {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+}
+
+.btn-circle.btn-sm,
+.btn-group-sm > .btn-circle.btn {
+  width: 35px;
+  height: 35px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.btn-circle.btn-lg,
+.btn-group-lg > .btn-circle.btn {
+  width: 50px;
+  height: 50px;
+  padding: 14px 15px;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 14px 15px;
+  font-size: 24px;
+}
+
 .btn-circle.btn-lg {
   padding-left: 4px;
   padding-right: 4px;
@@ -14,9 +45,10 @@ html {
 }
 
 .step-container {
-  height: calc(100% - 55px - 30px - 41px);
+  height: 100%;
   display: flex;
   flex-direction: column;
+  padding-top: 15px;
 
   .layout {
     flex-grow: 1;
@@ -30,7 +62,7 @@ html {
 .col-with-2 {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 16px;
 
   .widget-item {
     height: auto;
@@ -41,7 +73,8 @@ html {
 .timing {
   h2 {
     font-size: 1.7rem;
-    line-height: 1;
+    line-height: 0.7;
+    margin: 0;
   }
 
   small {
@@ -63,5 +96,20 @@ html {
   .custom-file-input {
     width: 0;
     height: 0;
+  }
+}
+
+.layout {
+  [class*="col"] {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  [class*="col"]:first-child {
+    padding-left: 15px;
+  }
+
+  [class*="col"]:last-child {
+    padding-right: 15px;
   }
 }
