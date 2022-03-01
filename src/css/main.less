@@ -1,3 +1,5 @@
+@mobile-min-sz: 768px;
+
 html {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -45,28 +47,40 @@ html {
 }
 
 .step-container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
   padding-top: 15px;
 
   .layout {
     flex-grow: 1;
   }
+
+  @media screen and (min-width: @mobile-min-sz) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .widget-item {
-  height: 100%;
+  min-height: 80vh;
+
+  @media screen and (min-width: @mobile-min-sz) {
+    min-height: 0;
+    height: 100%;
+  }
 }
 
 .col-with-2 {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
 
   .widget-item {
     height: auto;
     flex-grow: 1;
+  }
+
+  @media screen and (min-width: @mobile-min-sz) {
+    gap: 20px;
   }
 }
 
@@ -83,10 +97,14 @@ html {
 }
 
 .btn-upload {
-  position: absolute;
-  bottom: 1rem;
+  position: fixed;
+  bottom: 1.5rem;
   left: 1.5rem;
   z-index: 4;
+
+  @media screen and (min-width: @mobile-min-sz) {
+    position: absolute;
+  }
 }
 
 .dropdown-item {
@@ -98,18 +116,27 @@ html {
     height: 0;
   }
 }
-
 .layout {
-  [class*="col"] {
-    padding-left: 8px;
-    padding-right: 8px;
+  [class*="col"] + [class*="col"] {
+    padding-top: 10px;
   }
 
-  [class*="col"]:first-child {
-    padding-left: 15px;
-  }
+  @media screen and (min-width: @mobile-min-sz) {
+    [class*="col"] + [class*="col"] {
+      padding-top: 0;
+    }
 
-  [class*="col"]:last-child {
-    padding-right: 15px;
+    [class*="col"] {
+      // padding-left: 8px;
+      // padding-right: 8px;
+    }
+
+    [class*="col"]:first-child {
+      // padding-left: 15px;
+    }
+
+    [class*="col"]:last-child {
+      // padding-right: 15px;
+    }
   }
 }
